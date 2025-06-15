@@ -1,16 +1,16 @@
 [Setup]
-AppName=AlistHelper
+AppName=OpenListDesktop
 AppVersion={#AppVersion}
 AppPublisher=ILoveScratch2
-AppCopyright=Copyright (C) 2025 All Contributors.
+AppCopyright=Copyright (C) 2025 All Contributors
 WizardStyle=modern
 Compression=lzma2
 SolidCompression=yes
-DefaultDirName={autopf}\AlistHelper\
-DefaultGroupName=AlistHelper
+DefaultDirName={autopf}\OpenListDesktop\
+DefaultGroupName=OpenListHelper
 SetupIconFile=openlisthelper.ico
-UninstallDisplayIcon={app}\alisthelper.exe
-UninstallDisplayName=AlistHelper
+UninstallDisplayIcon={app}\openlisthelper.exe
+UninstallDisplayName=OpenListDesktop
 UsePreviousAppDir=no
 PrivilegesRequiredOverridesAllowed=dialog
 PrivilegesRequired=lowest
