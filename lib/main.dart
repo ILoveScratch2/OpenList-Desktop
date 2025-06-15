@@ -49,7 +49,7 @@ class MyApp extends ConsumerWidget {
           }
         },
         child: MaterialApp(
-          title: 'Alist Helper',
+          title: 'OpenList Desktop',
           locale: TranslationProvider.of(context).flutterLocale,
           supportedLocales: AppLocaleUtils.supportedLocales,
           localizationsDelegates: GlobalMaterialLocalizations.delegates,

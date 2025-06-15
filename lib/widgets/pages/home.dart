@@ -19,7 +19,7 @@ class AlistHelperIcon extends StatelessWidget {
         const SizedBox(height: 20),
         Image.asset('assets/openlisthelper.png', height: 80, width: 80),
         const SizedBox(height: 20),
-        const Text('OpenList Helper',
+        const Text('OpenList Desktop',
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center),
         const SizedBox(height: 20)

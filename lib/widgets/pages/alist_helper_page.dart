@@ -25,7 +25,7 @@ class AlistHelperPage extends ConsumerWidget {
         appBar: (sizingInformation.isDesktop
             ? null
             : AppBar(
-                title: const Text('Alist Helper',
+                title: const Text('OpenList Desktop',
                     style: TextStyle(fontWeight: FontWeight.bold)),
               )),
         body: Center(

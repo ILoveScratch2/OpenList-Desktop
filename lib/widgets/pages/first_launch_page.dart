@@ -30,7 +30,7 @@ class FirstLaunchPage extends StatelessWidget {
         appBar: (sizingInformation.isDesktop
             ? null
             : AppBar(
-                title: const Text('Welcome to Alist Helper!',
+                title: const Text('Welcome to OpenList Desktop!',
                     style: TextStyle(fontWeight: FontWeight.bold)),
               )),
         body: const FirstLaunchBody());
@@ -109,7 +109,7 @@ class _FirstLaunchBodyState extends ConsumerState<FirstLaunchBody> {
                 Platform.isWindows
                     ? ListTile(
                         leading: const Icon(Icons.info_outline),
-                        title: Text(t.firstLaunch.autoInstall(name: 'Alist')),
+                        title: Text(t.firstLaunch.autoInstall(name: 'OpenList')),
                         trailing:
                             alistState.upgradeStatus == UpgradeStatus.installing
                                 ? const CircularProgressIndicator()
@@ -178,7 +178,7 @@ class _FirstLaunchBodyState extends ConsumerState<FirstLaunchBody> {
                   onTap: () async {
                     await launchUrl(
                         Uri.parse(
-                            'https://alist.nn.ci/zh/guide/install/manual.html'),
+                            'https://openlist.team/guide/install/manual.html'),
                         mode: LaunchMode.externalApplication);
                   },
                 ),

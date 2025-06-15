@@ -188,7 +188,7 @@ class AlistNotifier extends Notifier<AlistState> {
 
   Future<void> fetchLatestVersion() async {
     final response = await http.get(Uri.parse(
-        'https://api.github.com/repos/AlistGo/alist/releases/latest'));
+        'https://api.github.com/repos/OpenListTeam/OpenList/releases/latest'));
     final json = jsonDecode(response.body) as Map<String, dynamic>;
     try {
       String latest = json['tag_name'];
@@ -219,7 +219,7 @@ class AlistNotifier extends Notifier<AlistState> {
 
   Future<void> installAlist(String downloadLink) async {
     state = state.copyWith(upgradeStatus: UpgradeStatus.installing);
-    String targetArchiveFile = '${state.workDir}/alistnew.zip';
+    String targetArchiveFile = '${state.workDir}/openlistnew.zip';
     await Dio().download(downloadLink, targetArchiveFile);
     FileHelper.unzipFile(targetArchiveFile, state.workDir);
     await File(targetArchiveFile).delete();
@@ -230,23 +230,23 @@ class AlistNotifier extends Notifier<AlistState> {
 
   Future<void> upgradeAlist(String downloadLink) async {
     state = state.copyWith(upgradeStatus: UpgradeStatus.installing);
-    String targetArchiveFile = '${state.workDir}/alistnew.zip';
+    String targetArchiveFile = '${state.workDir}/openlistnew.zip';
     String backupFolder = '${state.workDir}/.old';
     String currentAlist = Platform.isWindows
-        ? '${state.workDir}/alist.exe'
-        : '${state.workDir}/alist';
+        ? '${state.workDir}/openlist.exe'
+        : '${state.workDir}/openlist';
     await Dio().download(downloadLink, targetArchiveFile);
     endAlist();
     if (!await Directory(backupFolder).exists()) {
       await Directory(backupFolder).create();
     }
-    if (await File('$backupFolder/alist-${state.currentVersion}.exe')
+    if (await File('$backupFolder/openlist-${state.currentVersion}.exe')
         .exists()) {
-      await File('$backupFolder/alist-${state.currentVersion}.exe').delete();
+      await File('$backupFolder/openlist-${state.currentVersion}.exe').delete();
     }
     await File(currentAlist)
-        .rename('$backupFolder/alist-${state.currentVersion}.exe');
-    FileHelper.unzipFile('${state.workDir}/alistnew.zip', state.workDir);
+        .rename('$backupFolder/openlist-${state.currentVersion}.exe');
+    FileHelper.unzipFile('${state.workDir}/openlistnew.zip', state.workDir);
     await File(targetArchiveFile).delete();
     getAlistCurrentVersion(addToOutput: false);
     state = state.copyWith(upgradeStatus: UpgradeStatus.complete);
