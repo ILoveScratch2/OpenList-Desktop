@@ -7,9 +7,9 @@ WizardStyle=modern
 Compression=lzma2
 SolidCompression=yes
 DefaultDirName={autopf}\OpenListDesktop\
-DefaultGroupName=OpenListHelper
+DefaultGroupName=OpenListDesktop
 SetupIconFile=openlisthelper.ico
-UninstallDisplayIcon={app}\openlisthelper.exe
+UninstallDisplayIcon={app}\openlistdesktop.exe
 UninstallDisplayName=OpenListDesktop
 UsePreviousAppDir=no
 PrivilegesRequiredOverridesAllowed=dialog
@@ -23,10 +23,10 @@ ApplicationsFound=The following applications are using files that need to be upd
 ApplicationsFound2=The following applications are using files that need to be updated by Setup. It is recommended that you allow Setup to automatically close these applications.%nIMPORTANT NOTE: If you allow alisthelper to minimize to tray, you need to exit alisthelper manually!
 
 [Files]
-Source: "Release\alisthelper.exe"; DestDir: "{app}"; DestName: "alisthelper.exe"
+Source: "Release\openlistdesktop.exe"; DestDir: "{app}"; DestName: "openlistdesktop.exe"
 Source: "Release\*"; DestDir: "{app}"
 Source: "Release\data\*"; DestDir: "{app}\data\"; Flags: recursesubdirs
 
 [Icons]
-Name: "{userdesktop}\AlistHelper"; Filename: "{app}\AlistHelper.exe"
-Name: "{group}\AlistHelper"; Filename: "{app}\AlistHelper.exe"
+Name: "{userdesktop}\OpenlistDesktop"; Filename: "{app}\OpenListDesktop.exe"
+Name: "{group}\openlistdesktop"; Filename: "{app}\OpenlistDesktop.exe"
