@@ -35,14 +35,13 @@ jobs:
         run: flutter build windows --release
       
       - name: Create portable ZIP
-        uses: thedoctor0/zip-release@master
-        with:
-          type: zip
-          filename: ${{ env.WINDOWS_PORTABLE_NAME }}.zip
-          directory: build/windows/x64/runner/Release
+        run: |
+          cd build/windows/x64/runner/Release
+          7z a -tzip ${{ github.workspace }}/${{ env.WINDOWS_PORTABLE_NAME }}.zip ./*
+        shell: cmd
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: windows-portable
-          path: ${{ env.WINDOWS_PORTABLE_NAME }}.zip
+          path: ${{ github.workspace }}/${{ env.WINDOWS_PORTABLE_NAME }}.zip
