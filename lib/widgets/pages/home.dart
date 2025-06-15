@@ -17,9 +17,9 @@ class AlistHelperIcon extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(height: 20),
-        Image.asset('assets/alisthelper.png', height: 80, width: 80),
+        Image.asset('assets/openlisthelper.png', height: 80, width: 80),
         const SizedBox(height: 20),
-        const Text('Alist Helper',
+        const Text('OpenList Helper',
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center),
         const SizedBox(height: 20)

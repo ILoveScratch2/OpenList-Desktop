@@ -1,14 +1,14 @@
 [Setup]
 AppName=AlistHelper
 AppVersion={#AppVersion}
-AppPublisher=Xmarmalade
-AppCopyright=Copyright (C) 2023 Xmarmalade
+AppPublisher=ILoveScratch2
+AppCopyright=Copyright (C) 2025 All Contributors.
 WizardStyle=modern
 Compression=lzma2
 SolidCompression=yes
 DefaultDirName={autopf}\AlistHelper\
 DefaultGroupName=AlistHelper
-SetupIconFile=alisthelper.ico
+SetupIconFile=openlisthelper.ico
 UninstallDisplayIcon={app}\alisthelper.exe
 UninstallDisplayName=AlistHelper
 UsePreviousAppDir=no

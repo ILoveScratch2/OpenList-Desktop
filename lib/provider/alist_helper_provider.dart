@@ -28,7 +28,7 @@ class AlistHelperNotifier extends Notifier<AlistHelperState> {
 
   Future<void> fetchAlistHelperLatestVersion() async {
     final response = await http.get(Uri.parse(
-        'https://api.github.com/repos/Xmarmalade/alisthelper/releases/latest'));
+        'https://api.github.com/repos/ILoveScratc2/OpenList-Desktop/releases/latest'));
     final json = jsonDecode(response.body) as Map<String, dynamic>;
     try {
       String latest = json['tag_name'];

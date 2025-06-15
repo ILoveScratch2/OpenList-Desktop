@@ -1,5 +1,5 @@
-name: alisthelper
-description: A flutter app designed to provide more convenient management of alist operations.
+name: openlistdesktop
+description: An application designed to manage openlist better.
 publish_to: "none"
 version: 0.2.0+10
 
@@ -45,7 +45,7 @@ dev_dependencies:
   riverpod_lint: ^2.6.1
 
 flutter_launcher_icons:
-  image_path: "assets\\alisthelper.png"
+  image_path: "assets\\openlisthelper.png"
   windows:
     generate: true
     icon_size: 256 # min:48, max:256, default: 48
@@ -56,5 +56,5 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/alisthelper.ico
-    - assets/alisthelper.png
+    - assets/openlisthelper.ico
+    - assets/openlisthelper.png

@@ -20,7 +20,7 @@ Future<void> initTray() async {
     return;
   }
   String iconPath =
-      Platform.isWindows ? 'assets/alisthelper.ico' : 'assets/alisthelper.png';
+      Platform.isWindows ? 'assets/openlisthelper.ico' : 'assets/openlisthelper.png';
   await tm.trayManager.setIcon(iconPath);
 
   final items = [

@@ -30,12 +30,12 @@
         }
     },
     "firstLaunch": {
-        "intro": "Welcome to use Alist Helper, let's get started!",
-        "about": "Click here to learn more about Alist Helper!",
+        "intro": "Welcome to use OpenList-Desktop, let's get started!",
+        "about": "Click here to learn more about OpenList-Desktop!",
         "chooseTheme": "First, let's choose your preferred theme here!",
-        "chooseDirectory": "Second, you have to get an alist and tell the Alist Helper where it is!",
-        "autoInstall": "AlistHelper now supports automatic installation of ${name}, try it out!",
-        "getAlist": "Want to use a specific version of alist or install it manually? Click here!",
+        "chooseDirectory": "Second, you have to get an OpenList and tell the OpenList-Desktop where it is!",
+        "autoInstall": "OpenList-Desktop now supports automatic installation of ${name}, try it out!",
+        "getAlist": "Want to use a specific version of OpenList or install it manually? Click here!",
         "finish": "Finish! You can change these settings in settings!"
     },
     "tabs": {
@@ -70,10 +70,10 @@
         "hide": "Hide",
         "quit": "Quit",
         "openGUI":"Open Web GUI",
-        "startAlist": "Start Alist",
-        "endAlist": "End Alist",
-        "tooltip": "Alist Helper",
-        "workingTooltip": "Alist Helper (Alist Working)"
+        "startAlist": "Start OpenList",
+        "endAlist": "End OpenList",
+        "tooltip": "OpenList-Desktop",
+        "workingTooltip": "OpenList-Desktop (OpenList Working)"
     },
     "settings": {
         "interfaceSettings": {
@@ -88,33 +88,33 @@
             "system": "Auto"
         },
         "alistHelperSettings": {
-            "title": "Alist Helper Options",
+            "title": "OpenList-Desktop Options",
             "saveWindowPlacement": {
                 "title": "Save window placement",
-                "description": "This will allow Alist Helper save window placement."
+                "description": "This will allow OpenList-Desktop save window placement."
             },
             "minimizeToTray": {
                 "title": "Allow minimize to tray",
-                "description": "This will allow Alist Helper to minimize to tray."
+                "description": "This will allow OpenList-Desktop to minimize to tray."
             },
             "autoStart": {
                 "title": "Allow auto start",
-                "description": "This will allow Alist Helper auto start."
+                "description": "This will allow OpenList-Desktop auto start."
             },
             "autoStartLaunchMinimized": {
                 "title": "Allow silent auto start",
-                "description": "This will allow Alist Helper auto start silently."
+                "description": "This will allow OpenList-Desktop auto start silently."
             }
         },
         "alistSettings": {
-            "title": "Alist Options",
+            "title": "OpenList Options",
             "autoStartAlist": {
-                "title": "Allow alist auto start",
-                "description": "This will auto start alist when Alist Helper starts."
+                "title": "Allow OpenList auto start",
+                "description": "This will auto start OpenList when OpenList-Desktop starts."
             },
             "autoStartLaunchMinimized": {
                 "title": "Allow silent auto start",
-                "description": "This will allow Alist Helper auto start silently."
+                "description": "This will allow OpenList-Desktop auto start silently."
             },
             "workingDirectory": {
                 "title": "Working Directory",
@@ -126,7 +126,7 @@
             },
             "argumentsList": {
                 "title": "Arguments List",
-                "description": "Edit startup arguments for alist",
+                "description": "Edit startup arguments for OpenList",
                 "descriptionForRclone": "Edit startup arguments for rclone. If you don't understand the options here, please seek help.",
                 "editArguments": "Edit Arguments",
                 "addArgument": "Add Argument",
@@ -144,14 +144,14 @@
         "rcloneSettings": {
             "title": "Rclone Options",
             "rcloneDirNotSet": "You can mount your web drives on your computer using rclone. However, the Rclone Directory has not been set yet. Please go to the settings and configure the Rclone Directory to proceed.",
-            "rcloneWebdavNotSet": "You can mount your web drives on your computer using rclone. However, the WebDav account for accessing alist has not been set yet. Please go to the settings and configure the WebDav account to proceed.",
+            "rcloneWebdavNotSet": "You can mount your web drives on your computer using rclone. However, the WebDav account for accessing OpenList has not been set yet. Please go to the settings and configure the WebDav account to proceed.",
             "autoStartAlist": {
                 "title": "Allow rclone auto start",
-                "description": "This will auto start rclone when Alist Helper starts."
+                "description": "This will auto start rclone when OpenList-Desktop starts."
             },
             "startAfterAlist": {
-                "title": "Requires to start after alist starts",
-                "description": "This will require rclone to start after alist starts."
+                "title": "Requires to start after OpenList starts",
+                "description": "This will require rclone to start after OpenList starts."
             },
             "account": {
                 "title": "WebDav Account",
@@ -175,14 +175,14 @@
         "selectPackage": "Select the update package you want to download.",
         "networkError": "Loading... If it hasn't loaded for a long time, please check your network and try again.",
         "alistVersion": {
-            "title": "Alist Version",
-            "currentVersion": "Current Alist Version",
-            "latestVersion": "Latest Alist Version"
+            "title": "OpenList Version",
+            "currentVersion": "Current OpenList Version",
+            "latestVersion": "Latest OpenList Version"
         },
         "alistHelperVersion": {
-            "title": "Alist Helper Version",
-            "currentVersion": "Current Alist Helper Version",
-            "latestVersion": "Latest Alist Helper Version"
+            "title": "OpenList-Desktop Version",
+            "currentVersion": "Current OpenList-Desktop Version",
+            "latestVersion": "Latest OpenList-Desktop Version"
         },
         "rcloneVersion": {
             "title": "Rclone Version",

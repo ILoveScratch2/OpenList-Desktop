@@ -109,7 +109,7 @@ class HelpButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton.icon(
         onPressed: () => launchUrl(
-            Uri.parse('https://github.com/Xmarmalade/alisthelper/wiki')),
+            Uri.parse('https://github.com/ILoveScratch2')),
         icon: Icon(Icons.info_outline_rounded),
         label: Text(t.button.docs));
   }

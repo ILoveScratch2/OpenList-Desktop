@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 final _body = '''
-          Alist Helper is an open source app to manage alist.
+          OpenList-Desktop is an open source app to manage OpenList.
       
           Free. No tracking*. No ads.
 
@@ -33,9 +33,9 @@ class AboutPage extends StatelessWidget {
           Column(
             children: [
               const SizedBox(height: 20),
-              Image.asset('assets/alisthelper.png', height: 180, width: 180),
+              Image.asset('assets/openlisthelper.png', height: 180, width: 180),
               const SizedBox(height: 20),
-              const Text('Alist Helper',
+              const Text('OpenList Helper',
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center),
               const SizedBox(height: 20)
@@ -43,7 +43,7 @@ class AboutPage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Text(
-            '© ${DateTime.now().year} Xmarmalade',
+            '© ${DateTime.now().year} ILS',
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 10),
@@ -54,16 +54,16 @@ class AboutPage extends StatelessWidget {
                 TextButton(
                   onPressed: () async {
                     await launchUrl(
-                        Uri.parse('https://github.com/Xmarmalade/alisthelper'),
+                        Uri.parse('https://github.com/ILoveScratch2/OpenList-Desktop'),
                         mode: LaunchMode.externalApplication);
                   },
                   child: const Text('Source Code (Github)'),
                 ),
                 TextButton(
                   onPressed: () async {
-                    await launchUrl(Uri.parse('https://alist.nn.ci/'));
+                    await launchUrl(Uri.parse('https://openlist.team'));
                   },
-                  child: const Text('Alist'),
+                  child: const Text('OpenList'),
                 ),
                 TextButton(
                   onPressed: () {
@@ -73,7 +73,7 @@ class AboutPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => LicensePage(
                                   applicationIcon: Image.asset(
-                                      'assets/alisthelper.png',
+                                      'assets/openlisthelper.png',
                                       height: 100,
                                       width: 100),
                                 )));

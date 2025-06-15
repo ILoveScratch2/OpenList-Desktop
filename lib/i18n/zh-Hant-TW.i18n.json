@@ -30,12 +30,12 @@
         }
     },
     "firstLaunch": {
-        "intro": "歡迎使用 Alist Helper,讓我們開始吧!",
-        "about": "點擊此處瞭解更多關於 Alist Helper 的資訊!",
+        "intro": "歡迎使用 OpenList-Desktop,讓我們開始吧!",
+        "about": "點擊此處瞭解更多關於 OpenList-Desktop 的資訊!",
         "chooseTheme": "首先,讓我們在這裡選擇您喜歡的主題!",
-        "chooseDirectory": "第二步,您需要安装 alist 並告訴 Alist Helper 它在哪裡。",
-        "autoInstall": "Alist Helper現已支持自動安裝 ${name} ,點擊這裡以開始安裝。",
-        "getAlist": "想要使用特定版本的alist或是手動安裝?點擊這裡。",
+        "chooseDirectory": "第二步,您需要安装 OpenList 並告訴 OpenList-Desktop 它在哪裡。",
+        "autoInstall": "OpenList-Desktop現已支持自動安裝 ${name} ,點擊這裡以開始安裝。",
+        "getAlist": "想要使用特定版本的OpenList或是手動安裝?點擊這裡。",
         "finish": "完成!您可以在設定中更改這些設定!"
     },
     "tabs": {
@@ -70,10 +70,10 @@
         "hide": "隱藏",
         "quit": "退出",
         "openGUI": "開啟 Web GUI",
-        "startAlist": "啟動 Alist 服務",
-        "endAlist": "關閉 Alist 服務",
-        "tooltip": "Alist Helper",
-        "workingTooltip": "Alist Helper (Alist 運行中)"
+        "startAlist": "啟動 OpenList 服務",
+        "endAlist": "關閉 OpenList 服務",
+        "tooltip": "OpenList-Desktop",
+        "workingTooltip": "OpenList-Desktop (OpenList 運行中)"
     },
     "settings": {
         "interfaceSettings": {
@@ -88,33 +88,33 @@
             "system": "跟隨系統"
         },
         "alistHelperSettings": {
-            "title": "Alist Helper 選項",
+            "title": "OpenList-Desktop 選項",
             "saveWindowPlacement": {
                 "title": "儲存視窗位置",
-                "description": "這將允許 Alist Helper 儲存視窗位置。"
+                "description": "這將允許 OpenList-Desktop 儲存視窗位置。"
             },
             "minimizeToTray": {
                 "title": "允許最小化到托盤",
-                "description": "這將允許 Alist Helper 最小化到托盤。"
+                "description": "這將允許 OpenList-Desktop 最小化到托盤。"
             },
             "autoStart": {
                 "title": "允許自動啟動",
-                "description": "這將允許 Alist Helper 自動啟動。"
+                "description": "這將允許 OpenList-Desktop 自動啟動。"
             },
             "autoStartLaunchMinimized": {
                 "title": "允許靜默自動啟動",
-                "description": "這將允許 Alist Helper 靜默自動啟動。"
+                "description": "這將允許 OpenList-Desktop 靜默自動啟動。"
             }
         },
         "alistSettings": {
-            "title": "Alist 選項",
+            "title": "OpenList 選項",
             "autoStartAlist": {
-                "title": "允許 alist 自動啟動",
-                "description": "這將在 Alist Helper 啟動時自動啟動 alist。"
+                "title": "允許 OpenList 自動啟動",
+                "description": "這將在 OpenList-Desktop 啟動時自動啟動 OpenList。"
             },
             "autoStartLaunchMinimized": {
                 "title": "允許靜默自動啟動",
-                "description": "這將允許 Alist Helper 靜默自動啟動。"
+                "description": "這將允許 OpenList-Desktop 靜默自動啟動。"
             },
             "workingDirectory": {
                 "title": "工作目錄",
@@ -126,7 +126,7 @@
             },
             "argumentsList": {
                 "title": "啟動參數列表",
-                "description": "編輯 alist 的啟動參數",
+                "description": "編輯 OpenList 的啟動參數",
                 "descriptionForRclone": "編輯 rclone 的啟動參數。如果你不明白這裡的選項，請尋求幫助",
                 "editArguments": "編輯參數",
                 "addArgument": "新增參數",
@@ -144,14 +144,14 @@
         "rcloneSettings": {
             "title": "Rclone 選項",
             "rcloneDirNotSet": "您可以使用 rclone 將您的網絡驅動器掛載到計算機上。但是，尚未設置 Rclone 目錄。請轉到設置並配置 Rclone 目錄以繼續。",
-            "rcloneWebdavNotSet": "您可以使用 rclone 將您的網絡驅動器掛載到計算機上。但是，尚未設置用於訪問 alist 的 WebDav 帳戶。請轉到設置並配置 WebDav 帳戶以繼續。",
+            "rcloneWebdavNotSet": "您可以使用 rclone 將您的網絡驅動器掛載到計算機上。但是，尚未設置用於訪問 OpenList 的 WebDav 帳戶。請轉到設置並配置 WebDav 帳戶以繼續。",
             "autoStartAlist": {
                 "title": "允許 rclone 自動啟動",
-                "description": "這將在 Alist Helper 啟動時自動啟動 rclone。"
+                "description": "這將在 OpenList-Desktop 啟動時自動啟動 rclone。"
             },
             "startAfterAlist": {
-                "title": "要求在 alist 啟動後啟動",
-                "description": "這將要求 rclone 在 alist 啟動後啟動。"
+                "title": "要求在 OpenList 啟動後啟動",
+                "description": "這將要求 rclone 在 OpenList 啟動後啟動。"
             },
             "account": {
                 "title": "WebDav 帳戶",
@@ -175,14 +175,14 @@
         "selectPackage": "選擇要下載的更新軟體包。",
         "networkError": "正在載入中...若長時間未載入請檢查網路並重試。",
         "alistVersion": {
-            "title": "Alist 版本",
-            "currentVersion": "目前 Alist 版本",
-            "latestVersion": "最新 Alist 版本"
+            "title": "OpenList 版本",
+            "currentVersion": "目前 OpenList 版本",
+            "latestVersion": "最新 OpenList 版本"
         },
         "alistHelperVersion": {
-            "title": "Alist Helper 版本",
-            "currentVersion": "目前 Alist Helper 版本",
-            "latestVersion": "最新 Alist Helper 版本"
+            "title": "OpenList-Desktop 版本",
+            "currentVersion": "目前 OpenList-Desktop 版本",
+            "latestVersion": "最新 OpenList-Desktop 版本"
         },
         "rcloneVersion": {
             "title": "Rclone 版本",

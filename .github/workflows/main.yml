@@ -11,7 +11,7 @@ on:
 
 env:
   # APP name
-  APP_NAME: alisthelper
+  APP_NAME: OpenList-Desktop
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,8 +21,8 @@ jobs:
 
     env:
       # The name of the installer
-      WINDOWS_INSTALLER_NAME: AlistHelper_installer_${{ github.ref_name }}_windows-x86_64
-      WINDOWS_PORTABLE_NAME: AlistHelper_${{ github.ref_name }}_windows-x86_64
+      WINDOWS_INSTALLER_NAME: OpenListDesktop_installer_${{ github.ref_name }}_windows-x86_64
+      WINDOWS_PORTABLE_NAME: OpenListDesktop_${{ github.ref_name }}_windows-x86_64
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -40,11 +40,9 @@ jobs:
           flutter build windows
 
       - name: Copy innosetup.iss
-        # copy assets/alisthelper.ico to build/windows/x64/runner/
-        # copy build/windows/x64/runner/Release/innosetup.iss to build/windows/x64/runner/
         run: |
           cp windows/scripts/innosetup.iss build/windows/x64/runner/
-          cp assets/alisthelper.ico build/windows/x64/runner/
+          cp assets/openlisthelper.ico build/windows/x64/runner/
 
       - name: Build installer executable
         working-directory: build/windows/x64/runner/
@@ -81,8 +79,8 @@ jobs:
 
     env:
       # The name of the app
-      MACOS_APP_NAME: AlistHelper_app_${{ github.ref_name }}_macos-x86_64
-      DMG_NAME: AlistHelper_${{ github.ref_name }}_macos.dmg
+      MACOS_APP_NAME: OpenListDesktop_app_${{ github.ref_name }}_macos-x86_64
+      DMG_NAME: OpenListDesktop_${{ github.ref_name }}_macos.dmg
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -104,8 +102,8 @@ jobs:
       - name: Archive App
         run: |
           cd build/macos/Build/Products/Release/
-          tar -czf ${{ env.MACOS_APP_NAME }}.tar.gz alisthelper.app
-          hdiutil create -volname "alisthelper" -srcfolder alisthelper.app -ov -format UDZO ${{ env.DMG_NAME }}
+          tar -czf ${{ env.MACOS_APP_NAME }}.tar.gz openlist-desktop.app
+          hdiutil create -volname "helper" -srcfolder openlisthelper.app -ov -format UDZO ${{ env.DMG_NAME }}
 
       - name: Release
         uses: softprops/action-gh-release@v1
