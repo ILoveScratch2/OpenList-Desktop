@@ -45,3 +45,38 @@ jobs:
         with:
           name: windows-portable
           path: ${{ github.workspace }}/${{ env.WINDOWS_PORTABLE_NAME }}.zip
+
+  build-linux:
+    runs-on: ubuntu-latest
+    env:
+      LINUX_PORTABLE_NAME: OpenListDesktop_${{ github.ref_name }}_linux-x86_64
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+          cache: true
+          
+      - name: Install dependencies
+        run: |
+          flutter config --enable-linux-desktop
+          flutter pub get
+          
+      - name: Run build_runner
+        run: dart run build_runner build --delete-conflicting-outputs
+      
+      - name: Build Linux application
+        run: flutter build linux --release
+      
+      - name: Create portable tar.gz
+        run: |
+          cd build/linux/x64/release/bundle
+          tar -czf ${{ github.workspace }}/${{ env.LINUX_PORTABLE_NAME }}.tar.gz ./*
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-portable
+          path: ${{ github.workspace }}/${{ env.LINUX_PORTABLE_NAME }}.tar.gz
