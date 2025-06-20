@@ -54,18 +54,16 @@ jobs:
     runs-on: ubuntu-latest
     env:
       LINUX_PORTABLE_NAME: OpenListDesktop_${{ github.ref_name }}_linux-x86_64
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
           cache: true
-          
-      - name: Install Linux dependencies
+      # =============== 安装核心依赖（失败将中断构建）==============
+      - name: Install essential dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -77,26 +75,28 @@ jobs:
             libxinerama-dev \
             libxcursor-dev \
             libxi-dev \
-            libasound2 \
-            libpulse-dev \
             libudev-dev
-
+      # =============== 安装可选依赖（失败也不会中断）==============
+      - name: Install optional dependencies (skip on failure)
+        continue-on-error: true
+        run: |
+          sudo apt-get install -y libasound2t64 || echo "libasound2t64 skipped"
+          sudo apt-get install -y libpulse-dev || echo "libpulse-dev skipped"
+      # =============== 启用 Linux 桌面并获取依赖 ================
       - name: Enable Linux desktop & Get dependencies
         run: |
           flutter config --enable-linux-desktop
           flutter pub get
-          
       - name: Run build_runner
         run: dart run build_runner build --delete-conflicting-outputs
-      
+      # =============== 构建 Linux 应用 ================
       - name: Build Linux application
         run: flutter build linux --release
-      
+      # =============== 打包构建产物 ================
       - name: Create portable tar.gz
         run: |
           cd build/linux/x64/release/bundle
           tar -czf ${{ github.workspace }}/${{ env.LINUX_PORTABLE_NAME }}.tar.gz ./*
-      
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
