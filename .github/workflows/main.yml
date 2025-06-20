@@ -51,7 +51,7 @@ jobs:
 
   # ====== Linux 构建 ======
   build-linux:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       LINUX_PORTABLE_NAME: OpenListDesktop_${{ github.ref_name }}_linux-x86_64
 
