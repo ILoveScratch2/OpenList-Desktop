@@ -183,7 +183,7 @@ class _UpgradePageState extends ConsumerState<UpgradePage> {
                                     alistHelperState.latestVersion)
                                 ? (() async {
                                     await launchUrl(Uri.parse(
-                                        'https://github.com/ILoveScratch2/OpenList-Desktop/releases/beta'));
+                                        'https://github.com/ILoveScratch2/OpenList-Desktop/releases/latest'));
                                   })
                                 : null)),
                         child: const Icon(Icons.open_in_browser_outlined),
