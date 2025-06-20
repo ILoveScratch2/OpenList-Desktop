@@ -46,7 +46,7 @@ jobs:
           name: windows-portable
           path: ${{ github.workspace }}/${{ env.WINDOWS_PORTABLE_NAME }}.zip
 
-  build-linux:
+    build-linux:
     runs-on: ubuntu-latest
     env:
       LINUX_PORTABLE_NAME: OpenListDesktop_${{ github.ref_name }}_linux-x86_64
@@ -58,6 +58,22 @@ jobs:
         with:
           channel: "stable"
           cache: true
+          
+      - name: Install Linux dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgtk-3-dev \
+            libgl1 \
+            libx11-dev \
+            libxext-dev \
+            libxrandr-dev \
+            libxinerama-dev \
+            libxcursor-dev \
+            libxi-dev \
+            libasound2 \
+            libpulse-dev \
+            libudev-dev
           
       - name: Install dependencies
         run: |
@@ -80,3 +96,4 @@ jobs:
         with:
           name: linux-portable
           path: ${{ github.workspace }}/${{ env.LINUX_PORTABLE_NAME }}.tar.gz
+
