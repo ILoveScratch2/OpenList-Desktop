@@ -8,6 +8,8 @@
 
 *基于Alisthelper开发*
 
+从[https://github.com/ILoveScratch2/OpenList-Desktop](https://github.com/ILoveScratch2/OpenList-Desktop)fork，修复了一些bug，编译了linux版本
+
 *特别感谢@Xmarmalade及所有Alisthelper Contributors*
 
 
