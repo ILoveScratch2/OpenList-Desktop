@@ -72,7 +72,7 @@ class WorkingDirectoryTile extends ConsumerWidget {
                       final directory =
                           Directory(workingDirectoryController.text);
                       final String programName =
-                          Platform.isWindows ? "alist.exe" : "alist";
+                          Platform.isWindows ? "openlist.exe" : "openlist";
                       try {
                         final List<FileSystemEntity> files =
                             await directory.list().toList();
