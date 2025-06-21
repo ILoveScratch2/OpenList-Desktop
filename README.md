@@ -6,6 +6,7 @@
 
 English | [简体中文](./README_zh-Hans.md) |  [CODE_OF_CONDUCT](./CODE_OF_CONDUCT.md)
 
+frok from [https://github.com/ILoveScratch2/OpenList-Desktop](https://github.com/ILoveScratch2/OpenList-Desktop)
 
 *Based on Alisthelper*
 

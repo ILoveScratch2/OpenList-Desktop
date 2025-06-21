@@ -84,14 +84,14 @@ class AlistNotifier extends Notifier<AlistState> {
 
     if (Platform.isWindows) {
       process = await Process.start(
-        '${state.workDir}\\alist.exe',
+        '${state.workDir}\\openlist.exe',
         state.alistArgs,
         workingDirectory: state.workDir,
         environment: envVars,
       );
     } else {
       process = await Process.start(
-        '${state.workDir}/alist',
+        '${state.workDir}/openlist',
         state.alistArgs,
         workingDirectory: state.workDir,
         environment: envVars,
@@ -112,7 +112,7 @@ class AlistNotifier extends Notifier<AlistState> {
     state = state.copyWith(isRunning: false);
     Process process;
     if (Platform.isWindows) {
-      process = await Process.start('taskkill', ['/f', '/im', 'alist.exe']);
+      process = await Process.start('taskkill', ['/f', '/im', 'openlist.exe']);
     } else {
       process = await Process.start('pkill', ['alist']);
     }
@@ -125,9 +125,9 @@ class AlistNotifier extends Notifier<AlistState> {
 
   static Future<void> endAlistProcess() async {
     if (Platform.isWindows) {
-      await Process.start('taskkill', ['/f', '/im', 'alist.exe']);
+      await Process.start('taskkill', ['/f', '/im', 'openlist.exe']);
     } else {
-      await Process.start('pkill', ['alist']);
+      await Process.start('pkill', ['openlist']);
     }
   }
 
@@ -136,11 +136,11 @@ class AlistNotifier extends Notifier<AlistState> {
     Process alistAdmin;
     if (Platform.isWindows) {
       alistAdmin = await Process.start(
-          '${state.workDir}\\alist.exe', ['admin', 'random'],
+          '${state.workDir}\\openlist.exe', ['admin', 'random'],
           workingDirectory: state.workDir);
     } else {
       alistAdmin = await Process.start(
-          '${state.workDir}/alist', ['admin', 'random'],
+          '${state.workDir}/openlist', ['admin', 'random'],
           workingDirectory: state.workDir);
     }
     alistAdmin.stderr.listen((data) {
@@ -159,11 +159,11 @@ class AlistNotifier extends Notifier<AlistState> {
     try {
       if (Platform.isWindows) {
         alistVersion = await Process.start(
-            '${state.workDir}\\alist.exe', ['version'],
+            '${state.workDir}\\openlist.exe', ['version'],
             workingDirectory: state.workDir);
       } else {
         alistVersion = await Process.start(
-            '${state.workDir}/alist', ['version'],
+            '${state.workDir}/openlist', ['version'],
             workingDirectory: state.workDir);
       }
       alistVersion.stdout.listen((data) {
